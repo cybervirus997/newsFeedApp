@@ -14,4 +14,9 @@ const fetchNews = async (query: string, from: string, to?: string) => {
   return response.data.articles;
 };
 
-export { fetchNews };
+const getTeslaNews = async (from: string) => await fetchNews('tesla', from);
+
+const getAppleNews = async (from: string, to: string) =>
+  await fetchNews('apple', from, to);
+
+export { fetchNews, getTeslaNews, getAppleNews };
