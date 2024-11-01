@@ -1,8 +1,12 @@
 import React from 'react';
-import {MainContent} from './src';
+import {Text, View} from 'react-native';
 
 const App = () => {
-  return <MainContent />;
+  return (
+    <View>
+      <Text>Hello</Text>
+    </View>
+  );
 };
 
 export default App;
