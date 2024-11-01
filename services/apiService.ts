@@ -6,8 +6,12 @@ const fetchNews = async (query: string, from: string, to?: string) => {
   const endpoint = `${endpointsHead}globalNews?endpoint=everything&q=${query}&from=${from}&sortBy=publishedAt${
     to ? `&to=${to}` : ''
   }`;
+
   const response = await axios.post(endpoint, {
-    headers: {Accept: 'application/json'},
+    headers: { Accept: 'application/json' },
   });
+
   return response.data.articles;
 };
+
+export { fetchNews };
